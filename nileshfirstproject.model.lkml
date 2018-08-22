@@ -10,7 +10,15 @@ datagroup: nileshfirstproject_default_datagroup {
 
 persist_with: nileshfirstproject_default_datagroup
 
-explore: order {}
+explore: order {
+join: customer {
+  type: left_outer
+  sql_on: ${order.customer_id} = ${customer.id} ;;
+  relationship: many_to_one
+}
+
+}
+
 
 #   joins:
 #     - join: customer
