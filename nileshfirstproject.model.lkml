@@ -27,7 +27,7 @@ join: customer {
 #       sql_on: ${order.customer_id} = ${customer.id}
 #       relationship: many_to_one
 
-
+explore: customer {}
 # - explore: customer
 
 # - explore: order_item
