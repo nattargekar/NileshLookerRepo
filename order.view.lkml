@@ -11,7 +11,7 @@ view: order {
     type: number
     # hidden: yes
     sql: ${TABLE}.CustomerId ;;
-    drill_fields: [order_date,order_month,order_quarter]
+
   }
 
   dimension_group: order {
