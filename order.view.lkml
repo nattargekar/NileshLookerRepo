@@ -38,6 +38,12 @@ view: order {
     sql: ${TABLE}.TotalAmount ;;
   }
 
+  measure: summed_order_amount {
+    type: sum
+    sql: ${total_amount} ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: [id, customer.id, customer.first_name, customer.last_name, order_item.count]

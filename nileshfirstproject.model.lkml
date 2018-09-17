@@ -11,6 +11,7 @@ datagroup: nileshfirstproject_default_datagroup {
 persist_with: nileshfirstproject_default_datagroup
 
 explore: order {
+
   label: "Orders"
 join: customer {
   type: left_outer
