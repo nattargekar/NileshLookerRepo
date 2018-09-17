@@ -1,4 +1,4 @@
-      - dashboard: test_dashboard
+- dashboard: test_dashboard
   title: Test Dashboard
   layout: newspaper
   elements:
