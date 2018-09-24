@@ -14,6 +14,7 @@ view: order {
 
   }
 
+
   dimension_group: order {
     type: time
     timeframes: [
@@ -41,6 +42,7 @@ view: order {
   measure: summed_order_amount {
     type: sum
     sql: ${total_amount} ;;
+    drill_fields: [id, count]
   }
 
 

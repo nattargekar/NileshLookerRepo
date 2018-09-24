@@ -1,5 +1,7 @@
 view: order_item {
+
   sql_table_name: dbo.OrderItem ;;
+
 
   dimension: id {
     primary_key: yes
@@ -32,5 +34,12 @@ view: order_item {
   measure: count {
     type: count
     drill_fields: [id, order.id, product.id, product.product_name]
+  }
+
+  dimension: My_tiers {
+    type: tier
+    tiers: [0,20,40,60,80]
+    style: integer
+    sql: ${quantity} ;;
   }
 }

@@ -14,14 +14,22 @@ persist_with: nileshfirstproject_default_datagroup
 
 explore: order {
 
-  label: "Orders"
+label: "Orders"
 join: customer {
   type: left_outer
   sql_on: ${order.customer_id} = ${customer.id} ;;
   relationship: many_to_one
 }
 
+join: order_item {
+  type:  left_outer
+  sql_on: ${order.id} = ${order_item.order_id} ;;
+  relationship: one_to_many
 }
+
+}
+
+# explore: order_item {}
 
 
 #   joins:

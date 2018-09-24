@@ -13,7 +13,7 @@ view: customer {
   }
 
   dimension: country {
-    type: string
+       type: string
     map_layer_name: countries
     sql: ${TABLE}.Country ;;
   }
